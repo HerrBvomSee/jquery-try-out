@@ -30,3 +30,19 @@
 .free-space {
     margin: 10px 0px;
 }
+
+.visible {
+    display: block;
+}
+
+.class-heading {
+    color: blue;
+}
+
+.class-para {
+    color: green;
+}
+
+.big-heading {
+    font-size: 2em;
+}

@@ -31,6 +31,21 @@ $(document).ready(function () {
         console.log($("a#alink").attr("href"));
     });
 
+    $("#change-text").click(function() {
+        $(".another").text("This is a replaced text");
+    });
+
+    $("#change-html").click(function() {
+        $(".another").html("This is a <b>replaced</b> text");
+    });
+
+    $("#change-val").click(function() {
+        $("input").val("A new value");
+    });
+
+    $("#change-attr").click(function() {
+        $("#alink").attr("href", "https://www.herrbvomsee.de");
+    });
 
     $("p").on({
         "dblclick": function () {
@@ -65,7 +80,7 @@ $(document).ready(function () {
         "click": function () {
             $("#panel").slideToggle(1000);
         }
-    })
+    });
     $("#div1").on({
         "click": function () {
         }
@@ -77,6 +92,54 @@ $(document).ready(function () {
     });
     $("button#drag").on({
     })
+
+    // APPEND-SECTION
+    $("button#append-text").click(function() {
+        console.log("append text");
+        $("p.append-para").append("<p> - with more text appended</p>");
+    });
+
+    $("button#append-item").click(function() {
+        console.log("append item");
+        $("ol").append("<li>new item</li>");
+    });
+
+    // BEFORE-AFTER-SECTION
+    $("button#before-para").click(function() {
+        $("p.be-af-para").before("<p>New text before para</p>");
+    });
+
+    $("button#after-para").click(function() {
+        $("p.be-af-para").after("<p>New text <b>after</b> para</p>");
+    });
+
+    // REMOVE-EMPTY-SECTION
+    $("button#remove").click(function() {
+        $("#remove-box").remove();
+    });
+
+    $("button#empty").click(function() {
+        $("#remove-box").empty();
+    });
+
+    $("button#remove-filter").click(function() {
+        $("*").remove("li");
+    });
+
+    // CLASS-CHANGES
+    $("button#add-class").click(function() {
+        $(".class-heading").addClass("big-heading class-para");
+    });
+
+    $("button#remove-class").click(function() {
+        $(".class-heading").removeClass("big-heading");
+        $("#class-para").removeClass("class-para");
+    });
+
+    $("button#toggle-class").click(function() {
+        $(".class-heading").toggleClass("big-heading");
+    });
+
 });
 
 function switcher(target) {

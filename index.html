@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
     <title>Title</title>
     <script src="jquery-3.6.0.js" type="text/javascript"></script>
     <script src="jquery-ui.js" type="text/javascript"></script>
@@ -22,10 +25,13 @@
         <a href="https://www.google.com" id="alink">Link to Google</a>
     </div>
 
-    <hr>
+    <div class="free-space">
+        <button id="change-text">Change text</button>
+        <button id="change-html">Change html</button>
+        <button id="change-val">Change val</button>
+        <button id="change-attr">Change link target</button>
+    </div>
 
-    <button id="hide-button">Hide</button>
-    <button id="stop">Stop</button>
     <hr />
     <button id="text">Get Text</button>
     <button id="html">Get html</button>
@@ -34,7 +40,55 @@
 
     <hr/>
 
-    <button id="proceed">Another button</button>
+    <div class="free-space" id="append-section">
+        <p class="append-para">A small list item append test</p>
+        <ol>
+            <li>Value 01</li>
+            <li>Value 02</li>
+            <li>Value 03</li>
+        </ol>
+        <button id="append-text">Append text</button>
+        <button id="append-item">Append item</button>
+    </div>
+
+    <hr/>
+
+    <div class="free-space" id="before-after-section">
+        <p class="be-af-para">A small paragraph for testing</p>
+        <button id="before-para">Insert before</button>
+        <button id="after-para">Insert after</button>
+    </div>
+
+    <hr/>
+
+    <div class="free-space" id="remove-empty-section">
+        <div id="remove-box" class="box visible">
+            Box to be removed
+        </div>
+        <button id="remove">Remove</button>
+        <button id="empty">Empty</button>
+        <button id="remove-filter">Remove filtered</button>
+    </div>
+
+    <hr/>
+
+    <div class="free-space" id="class-changes">
+        <h2 class="class-heading">This is a sample heading 2</h2>
+        <p id="class-para" class="class-para">And some example paragraph</p>
+
+        <button id="add-class">Add class</button>
+        <button id="remove-class">Remove class</button>
+        <button id="toggle-class">Toggle class</button>
+    </div>
+
+    <hr />
+
+    <button id="hide-button">Hide</button>
+    <button id="stop">Stop</button>
+
+    <hr/>
+
+    <button id="proceed">Moving button</button>
 
     <hr/>
     <div id="accordion" class="free-space">
